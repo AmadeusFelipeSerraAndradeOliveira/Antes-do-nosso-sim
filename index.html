@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Antes do nosso sim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="music" preload="auto" loop>
+    <source src="musica1.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="grain"></div>
+  <main id="app" class="app">
+    <section class="screen active" data-screen="welcome">
+      <div class="eyebrow">UMA PEQUENA EXPERIÊNCIA</div>
+      <h1>Antes do nosso<br><em>sim.</em></h1>
+      <p class="lead">Tem algumas coisas que eu queria te contar de um jeito diferente.</p>
+      <button class="btn primary" data-action="start">Ativar experiência <span>→</span></button>
+      <p class="micro">Use o celular com o som ligado.</p>
+    </section>
+
+    <section class="screen" data-screen="password">
+      <div class="eyebrow">SÓ VOCÊ SABE</div>
+      <h2>Qual foi a data<br>em que tudo começou?</h2>
+      <p>Digite a nossa data de namoro.</p>
+      <div class="date-inputs">
+        <input id="date" inputmode="numeric" maxlength="10" placeholder="Senha Secreta" aria-label="Data">
+      </div>
+      <button class="btn primary" data-action="checkDate">Entrar <span>→</span></button>
+      <p id="dateError" class="error">Essa não é a nossa data. Tenta de novo. ❤️</p>
+    </section>
+
+    <section class="screen" data-screen="chapter1">
+      <div class="chapter">01 / ONDE COMEÇOU</div>
+      <h2>Eu não estava<br>procurando ninguém.</h2>
+      <p>Na faculdade, a gente era colega de turma, mas quase não tinha conversado. Até que um evento da igreja, em Gurupi, fez eu começar a prestar mais atenção em você.</p>
+      <button class="btn ghost" data-next>Continuar <span>→</span></button>
+    </section>
+
+    <section class="screen photo-screen" data-screen="chapter2">
+      <div class="photo-frame"><img src="fotos/foto1.jpeg" alt="Eduarda" loading="eager"></div>
+      <div class="chapter">02 / DEPOIS DAQUELE DIA</div>
+      <h2>Quando te vi na faculdade de novo...</h2>
+      <p>eu não perdi tempo. Te chamei para sair.</p>
+      <button class="btn ghost" data-next>Eu lembro <span>→</span></button>
+    </section>
+
+    <section class="screen" data-screen="chapter3">
+      <div class="photo-frame"> <img src="fotos/foto6.jpeg" alt="Eduarda" loading="eager"></div>
+      <div class="chapter">03 / PRIMEIRO ENCONTRO</div>
+      <h2>Uma pergunta<br>bem fácil.</h2>
+      <p>Onde foi o nosso primeiro encontro?</p>
+      <div class="choices">
+        <button data-choice="err">Restaurante</button>
+        <button data-choice="ok">Cinema</button>
+        <button data-choice="err">Praça</button>
+      </div>
+      <p id="quizFeedback" class="feedback"></p>
+    </section>
+
+    <section class="screen photo-screen" data-screen="chapter4">
+      <div class="photo-frame tall"><img src="fotos/foto7.jpeg" alt="Eduarda" loading="lazy"></div>
+      <div class="chapter">04 / O FILME</div>
+      <h2>O filme era ruim.<br><em>Você também achou.</em></h2>
+      <p>Mas eu descobri uma coisa naquele dia: o filme podia ser péssimo. Estar com você já tinha valido a saída.</p>
+      <button class="btn ghost" data-next>Continuar <span>→</span></button>
+    </section>
+
+    <section class="screen" data-screen="chapter5">
+      <div class="chapter">05 / UMA COISA QUE EU SEI</div>
+      <h2>Talvez eu já soubesse<br>naquele primeiro encontro.</h2>
+      <p>Não sei explicar direito. Eu só sei que, olhando para trás, acho que lá no fundo eu já sabia que um dia casaria com você. Só não sabia quando.</p>
+      <button class="btn ghost" data-next>Mais uma coisa <span>→</span></button>
+    </section>
+
+    <section class="screen photo-screen" data-screen="chapter6">
+      <div class="photo-frame"><img src="fotos/foto3.jpeg" alt="Eduarda" loading="lazy"></div>
+      <div class="chapter">06 / VOCÊ</div>
+      <h2>Você já passou muita raiva comigo.</h2>
+      <p>Eu sei. Às vezes me falta maturidade e eu erro. Mas eu estou me esforçando para ser alguém melhor para você. Não perfeito. Melhor.</p>
+      <button class="btn ghost" data-next>Continuar <span>→</span></button>
+    </section>
+
+    <section class="screen" data-screen="chapter7">
+      <div class="photo-frame"> <img src="fotos/foto4.jpeg" alt="Eduarda" loading="eager"></div>
+<div class="chapter">07 / PORQUE É VOCÊ</div>
+      <p class="bigquote">“Não procurava por ninguém, mas aconteceu de uma forma tão natural que hoje estamos aqui.”</p>
+      <button class="btn ghost" data-next>Continuar <span>→</span></button>
+    </section>
+
+    <section class="screen letter" data-screen="letter">
+      <div class="chapter">08 / O QUE EU QUERIA TE DIZER</div>
+      <h2>Amor,</h2>
+      <p>Na faculdade, minha colega de turma. A gente nem tinha falado direito. Depois daquele evento em Gurupi, eu comecei a prestar mais atenção em você. Quando te vi de novo na faculdade, não perdi tempo e te chamei para sair.</p>
+      <p>Nosso primeiro encontro foi no cinema. O filme foi ruim, nós duas achamos, mas só de estar com você compensou.</p>
+      <p>Eu não procurava ninguém. Aconteceu de uma forma tão natural que hoje estamos aqui. E, quando penso em quando percebi que queria casar com você, talvez eu tenha que voltar lá no começo.</p>
+      <p>Eu sei que já te fiz passar raiva, que às vezes posso ter falta de maturidade. Mas estou me esforçando para ser alguém melhor para você.</p>
+      <p class="signature">Eu amo você.<br><span>Felipe</span></p>
+      <button class="btn ghost" data-next>Continuar <span>→</span></button>
+    </section>
+
+    <section class="screen" data-screen="chapter9">
+      <div class="photo-frame"> <img src="fotos/foto5.jpeg" alt="Eduarda" loading="eager"></div>
+<div class="chapter">09 / OS NOSSOS DIAS</div>
+      <h2>Algumas datas<br>que guardo comigo.</h2>
+      <div class="timeline">
+        <div><strong>18.04.2026</strong><span>Começamos nós dois.</span></div>
+        <div><strong>24.10.2026</strong><span>O dia desta sessão.</span></div>
+        <div><strong>18.12.2026</strong><span>O dia que já está marcado.</span></div>
+      </div>
+      <button class="btn ghost" data-next>Continuar <span>→</span></button>
+    </section>
+
+    <section class="screen" data-screen="chapter10">
+      <div class="chapter">10 / AGORA É SUA VEZ</div>
+      <h2>Você lembra<br>de nós?</h2>
+      <p>Qual dessas palavras combina mais com a nossa história?</p>
+      <div class="choices words">
+        <button data-word>Acaso</button>
+        <button data-word>Encontro</button>
+        <button data-word>Escolha</button>
+      </div>
+      <p id="wordFeedback" class="feedback"></p>
+    </section>
+
+    <section class="screen" data-screen="chapter11">
+<div class="chapter">11 / E TEM UMA COISA</div>
+      <h2>Você já sabe que eu escolhi você.</h2>
+      <p>O casamento já tem data. O futuro já está sendo construído. Mas existe uma parte dessa história que eu ainda quero fazer do jeito certo.</p>
+      <button class="btn primary" data-next>Descobrir <span>→</span></button>
+    </section>
+
+    <section class="screen" data-screen="chapter12">
+<div class="chapter">12 / SÓ MAIS UM PASSO</div>
+      <h2>Antes de terminar...</h2>
+      <p>respira. Olha com calma. E lembra de tudo que aconteceu até aqui.</p>
+      <button class="btn ghost" data-next>Estou pronta <span>→</span></button>
+    </section>
+
+    <section class="screen proposal" data-screen="proposal">
+      <div class="proposal-word">Agora...</div>
+      <div class="proposal-line">não olhe para a tela.</div>
+      <div class="proposal-count" id="proposalCount"></div>
+      <div class="proposal-final" id="proposalFinal">olhe para trás.</div>
+    </section>
+
+    <section class="screen after" data-screen="after">
+      <div class="chapter">NOSSO NOVO CAPÍTULO</div>
+      <h2>Então era isso.</h2>
+      <p>Do primeiro encontro até aqui. Agora falta viver o resto.</p>
+      <div class="ring-mark">∞</div>
+      <p class="dates"><strong>18.04.2026</strong> namoro<br><strong>24.10.2026</strong> pedido<br><strong>18.12.2026</strong> casamento</p>
+    </section>
+  </main>
+
+  <button id="musicToggle" class="music-toggle" aria-label="Controlar música" hidden>♫</button>
+  <div id="progress" class="progress"><span></span></div>
+  <script src="script.js"></script>
+</body>
+</html>
